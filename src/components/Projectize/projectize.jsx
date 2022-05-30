@@ -10,7 +10,7 @@ const Project=({name,details})=>{
         setProjectText('not completed')
     }
     return(
-        <div className="p-3 col-10 col-sm-6 col-lg-4" 
+        <div className="p-3 col-10 col-sm-6 col-lg-3" 
         onMouseEnter={()=>{setProjectText(details.description)}}
         onMouseLeave={()=>{setProjectText(name)}}
         onClick={handleClick}>    
