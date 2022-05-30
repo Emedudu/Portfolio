@@ -45,7 +45,7 @@ const App=()=>{
           'codeLink':'https://github.com/Emedudu/Mevote',
           'siteLink':'https://emedudu.github.io/Mevote'
         },
-        'NFT-MARKETPLACE':{
+        'EARN_FT':{
           'image':Earn_FTImage,
           'description':'A market for trading Non-Fungible Tokens',
           'completed':true,
