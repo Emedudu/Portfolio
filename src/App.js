@@ -7,6 +7,7 @@ import Home from './screens/Home';
 import Projects from './screens/Projects';
 import Earn_FTImage from './images/earn_ft.png'
 import MevoteImage from './images/mevote.png'
+import Fun_D_CrowdImage from './images/fun_d_crowd.png'
 import Unavailable from './images/unavailable.jpg'
 
 const App=()=>{
@@ -53,10 +54,11 @@ const App=()=>{
           'siteLink':'https://earn-ft.herokuapp.com/'
         },
         'FUN-D-CROWD':{
-          'image':Unavailable,
-          'description':'A fund raising platform',
-          'completed':false,
-          'codeLink':'https://github.com/Emedudu/Fun-d-crowd'
+          'image':Fun_D_CrowdImage,
+          'description':'A crowdfunding platform',
+          'completed':true,
+          'codeLink':'https://github.com/Emedudu/Fun-d-crowd',
+          'siteLink':'https://fun-d-crowd.herokuapp.com/'
         }
       }
     }

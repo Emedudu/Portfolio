@@ -10,12 +10,12 @@ const Project=({name,details})=>{
         setProjectText('not completed')
     }
     return(
-        <div className="p-3 col-10 col-sm-6 col-lg-3" 
+        <div className="p-3 col-10 col-sm-6 col-lg-4" 
         onMouseEnter={()=>{setProjectText(details.description)}}
         onMouseLeave={()=>{setProjectText(name)}}
         onClick={handleClick}>    
             <div className="card">
-                <img className="card-img-top" src={details.image} alt="Card image cap" width="128" height="128"/>
+                <img className="card-img-top" src={details.image} alt="Card image cap" width="256" height="256"/>
                 <div className="card-body">
                     <p className="projectChild">{projectText}</p>
                     <a href={details.codeLink}>Link to Code</a>         
