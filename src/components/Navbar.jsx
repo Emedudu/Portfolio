@@ -6,7 +6,8 @@ import Me from "../images/me.jpg";
 const Navigation=()=>{
     const [expanded, setExpanded] = useState(false);
     return(
-        <Navbar expanded={expanded} collapseOnSelect expand="lg" variant="light" sticky='top' style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.7),rgba(0,200,0,0.2))'}}>
+      // style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.7),rgba(0,200,0,0.2))'}}
+        <Navbar expanded={expanded} collapseOnSelect expand="lg" variant="light" sticky='top'>
           <Container>
             <Navbar.Brand href="#home"><img src={Me} alt="Me" style={{borderRadius: '50%'}} width="48" height="48"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />

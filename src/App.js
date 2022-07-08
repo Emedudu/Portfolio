@@ -8,6 +8,7 @@ import Projects from './screens/Projects';
 import Earn_FTImage from './images/earn_ft.png'
 import MevoteImage from './images/mevote.png'
 import Fun_D_CrowdImage from './images/fun_d_crowd.png'
+import DadaMotorsImage from './images/dadamotors.png'
 import Unavailable from './images/unavailable.jpg'
 
 const App=()=>{
@@ -30,7 +31,15 @@ const App=()=>{
         'WORKTALK':{
           'image':Unavailable,
           'description':"To ease communication between bosses and workers",
-          'completed':false
+          'completed':false,
+          'codeLink':'https://github.com/Emedudu/worktalk',
+        },
+        'DADAMOTORS':{
+          'image':DadaMotorsImage,
+          'description':'A site for trading cars',
+          'completed':true,
+          'codeLink':'https://github.com/Emedudu/CarsWorld',
+          'siteLink':'https://dadamotors1.herokuapp.com'
         },
         // 'RANDOM':{
         //   'description':"A program to generate random numbers",
@@ -65,7 +74,8 @@ const App=()=>{
 
   })
   return (
-    <div className="" style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.2),rgba(0,100,0,0.2))'}}>
+    // <div className="" style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.2),rgba(0,100,0,0.2))'}}>
+    <div>
       <Navigation/>
       <div className='shadow-lg p-3 m-3 bg-transparent rounded overflow-auto align-items-center' style={{'height':'90vh'}}>
         <Routes>
