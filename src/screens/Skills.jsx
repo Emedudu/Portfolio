@@ -3,9 +3,9 @@ import Skill from "../components/skills";
 
 const Skills = ({ appState }) => {
   return (
-    <div className="pt-5">
+    <div className="pt-5 skills-font">
       <div>
-        <p>Below are my skills and confidence levels:</p>
+        <p>Here are my skills:</p>
         <div>
           {Object.entries(appState).map((item, i) => {
             return (

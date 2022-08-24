@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.App-font {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.contact-font {
+  font-family: "Courier New", Courier, monospace;
+}
+.home-font {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.projects-font {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.skills-font {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +51,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+a {
+  text-decoration: none;
 }

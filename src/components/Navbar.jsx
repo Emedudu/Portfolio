@@ -1,57 +1,61 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Me } from "../images";
 
 const Navigation = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClose = () => setMenuOpen(false);
   return (
-    // style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.7),rgba(0,200,0,0.2))'}}
-    <Navbar
-      expanded={expanded}
-      collapseOnSelect
-      expand="lg"
-      variant="light"
-      sticky="top"
-    >
-      <Container>
+    <Navbar bg="light" expand={"sm"} className="mb-3">
+      <Container fluid>
         <Navbar.Brand href="#home">
           <img
             src={Me}
             alt="Me"
             style={{ borderRadius: "50%" }}
-            width="48"
-            height="48"
+            width="64"
+            height="64"
           />
         </Navbar.Brand>
         <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => setExpanded(expanded ? false : "expanded")}
+          aria-controls={`offcanvasNavbar-expand-sm`}
+          onClick={toggleMenu}
         />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
-              HOME
-            </Nav.Link>
-            <Nav.Link as={Link} to="/skills" onClick={() => setExpanded(false)}>
-              SKILLS
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/projects"
-              onClick={() => setExpanded(false)}
-            >
-              PROJECTS
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/contact"
-              onClick={() => setExpanded(false)}
-            >
-              CONTACT
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Navbar.Offcanvas
+          id={`offcanvasNavbar-expand-sm`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
+          placement="end"
+          restoreFocus={false}
+          show={menuOpen}
+          onHide={handleClose}
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-sm`}>
+              Emedev
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link as={Link} to="/" onClick={toggleMenu}>
+                HOME
+              </Nav.Link>
+              <Nav.Link as={Link} to="/skills" onClick={toggleMenu}>
+                SKILLS
+              </Nav.Link>
+              <Nav.Link as={Link} to="/projects" onClick={toggleMenu}>
+                PROJECTS
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contact" onClick={toggleMenu}>
+                CONTACT
+              </Nav.Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
   );

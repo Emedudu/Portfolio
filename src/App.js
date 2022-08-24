@@ -75,11 +75,15 @@ const App = () => {
   });
   return (
     // <div className="" style={{'backgroundImage': 'linear-gradient(to right,rgba(255,255,255,0.2),rgba(0,100,0,0.2))'}}>
-    <div>
+    <div className="App-font">
       <Navigation />
       <div
-        className="shadow-lg p-3 m-3 bg-transparent rounded overflow-auto align-items-center"
-        style={{ height: "90vh" }}
+        className="shadow-lg p-3 bg-transparent rounded overflow-auto align-items-center"
+        style={{
+          height: "90vh",
+          maxWidth: "600px",
+          margin: "auto",
+        }}
       >
         <Routes>
           <Route exact path="/" element={<Home />} />
